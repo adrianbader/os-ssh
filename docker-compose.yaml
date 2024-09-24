@@ -1,0 +1,8 @@
+services:
+  jigglypuff:
+    build: .
+    volumes:
+      - ./hostkey:/tmp/sshd/hostkey
+      - ./home/jigglypuff/.ssh:/tmp/jigglypuff/.ssh
+    ports:
+      - "62222:62222"
